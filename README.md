@@ -25,3 +25,4 @@
 - Extend the project with basic JavaScript functionality (e.g. plan selection or dynamic price updates)
 
 ## 🍿 Video
+https://github.com/user-attachments/assets/9aeec004-f6fd-497a-9b8b-146a1a099e60
