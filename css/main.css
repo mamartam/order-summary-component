@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+}
+main {
+  max-width: 90%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.main-content-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.card-description {
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+p {
+  color: hsl(224, 23%, 55%);
+  font-weight: 700;
+}
+.chosen-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.chosen-plan img {
+  margin-right: 25px;
+}
+.change-btn {
+  font-weight: 900;
+  color: hsl(245, 75%, 52%);
+  text-decoration: none;
+  border-bottom: 1px solid hsl(245, 75%, 52%);
+  transition: border-bottom linear 0.3s;
+}
+.change-btn:hover {
+  border-bottom: none;
+}
+.chosen-plan p {
+  line-height: 25px;
+}
+.current-plan {
+  display: flex;
+}
+.type-of-plan {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+button {
+  cursor: pointer;
+}
+.payment-btn {
+  display: block;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(225, 100%, 94%);
+  box-shadow: 0 5px 30px -10px hsl(245, 75%, 52%);
+  font-weight: 700;
+  transition: box-shadow linear 0.2s, transform linear 0.2s,
+    background-color linear 0.2s;
+}
+.payment-btn:hover {
+  box-shadow: 0 10px 30px -5px hsl(245, 75%, 52%);
+  transform: translateY(-5px);
+  background-color: hsl(245, 69%, 57%);
+}
+.cancel-btn {
+  display: block;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  color: hsl(224, 23%, 55%);
+  transition: color linear 0.1s;
+}
+.cancel-btn:hover {
+  color: hsl(223, 47%, 23%);
+}
+button:focus-visible,
+.change-btn:focus-visible {
+  outline: 2px solid hsl(245, 75%, 52%);
+  outline-offset: 2px;
+}
+
+@media (min-width: 425px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: hsl(225, 100%, 94%);
+    font-size: 16px;
+  }
+  main {
+    max-width: 450px;
+    align-items: center;
+  }
+  .main-content-container {
+    padding: 40px;
+  }
+  .main-header {
+    margin-bottom: 15px;
+  }
+  .card-description {
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+  .chosen-plan {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .chosen-plan img {
+    margin-right: 20px;
+  }
+  .payment-btn {
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .paymant-btn:hover {
+    transform: none;
+    box-shadow: 0 5px 30px -10px hsl(245, 75%, 52%);
+  }
+
+  .change-btn:hover {
+    border-bottom: 1px solid hsl(245, 75%, 52%);
+  }
+}
